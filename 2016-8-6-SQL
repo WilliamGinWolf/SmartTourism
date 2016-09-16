@@ -1,0 +1,47 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+import database.DBUtil;
+
+@WebServlet("/RegisterServlet")  
+public class RegisterServlet extends HttpServlet {  
+    private static final long serialVersionUID = 1L;  
+         
+    /** 
+     * @see HttpServlet#HttpServlet() 
+     */  
+    public RegisterServlet() {  
+        super();  
+    }  
+  
+    /** 
+     * 由于我们还没有说到POST请求，所以还是用GET来处理，汗颜啊，有点慢 
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response) 
+     */  
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {  
+        String account = request.getParameter("account"); // 从 request 中获取名为 account 的参数的值  
+        String password = request.getParameter("password"); // 从 request 中获取名为 password 的参数的值  
+        System.out.println("account:" + account + "\npassword:" + password); // 打印出来看一看  
+  
+        String resCode = "";  
+        String resMsg = "";  
+        String userId = "";  
+          
+          
+       
+  
+}
